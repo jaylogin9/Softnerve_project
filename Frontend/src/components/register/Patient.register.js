@@ -22,7 +22,7 @@ const Register = () => {
         try {
             e.preventDefault();
             const { patientName, patientContact, patientAddress, patientPincode } = user;
-            const res = await axios.post("https://softnerve-project-backend.vercel.app//add-patient", {
+            const res = await axios.post("https://softnerve-project-backend.vercel.app/add-patient", {
                 patientName, patientContact, patientAddress, patientPincode });
             if (res) {
                 window.alert("Appointment Booked");

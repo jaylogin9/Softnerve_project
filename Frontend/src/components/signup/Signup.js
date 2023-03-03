@@ -20,7 +20,7 @@ const Signup = () => {
         try {
             e.preventDefault();
             const { name, email, password, cpassword } = user;
-            const res = await axios.post("https://softnerve-project-backend.vercel.app//signup", { name, email, password, cpassword });
+            const res = await axios.post("https://softnerve-project-backend.vercel.app/signup", { name, email, password, cpassword });
             if (res){
                 window.alert("User registered successful");
                 console.log("complete registration");
