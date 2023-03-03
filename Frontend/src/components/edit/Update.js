@@ -21,7 +21,7 @@ const Edit = () => {
         try {
             const response=await axios.get(`/add-single/${id}`)
              setUser(response.data.Patient);
-             console.log(response);
+            // console.log(response.data);
         } catch (error) {
             console.log(error.message);
             window.alert(error.message);
@@ -52,13 +52,13 @@ const Edit = () => {
                 if (res) {
                     window.alert("Data Updated successfull");
                     //console.log("Data Updated successfull");
-                    setTimeout(() => Navigate("/"), 500);
+                    setTimeout(() => Navigate("/display"), 500);
                 }
             }
             
         } catch (error) {
             console.log(error.request.statusText);
-            window.alert(error.request.statusText);
+            window.alert(error.request.response);
         }
     };
 
@@ -72,12 +72,13 @@ const Edit = () => {
                     <div className="form-group mb-2">
                         <label htmlFor="name" className="form-lable">
                             Name
+                           
                         </label>
                         <input
                             type="text"
                             name="patientName"
                             id="name"
-                            value={user.name}
+                            value={user.patientName}
                             onChange={handleInputs}
                             className="form-control"
                             placeholder="Patient Name"
@@ -93,7 +94,7 @@ const Edit = () => {
                             type="text"
                             id="contact"
                             name="patientContact"
-                            value={user.contact}
+                            value={user.patientContact}
                             onChange={handleInputs}
                             className="form-control"
                             placeholder="Contact Number"
@@ -109,7 +110,7 @@ const Edit = () => {
                             type="text"
                             id="address"
                             name="patientAddress"
-                            value={user.address}
+                            value={user.patientAddress}
                             onChange={handleInputs}
                             className="form-control"
                             placeholder="Address"
@@ -125,7 +126,7 @@ const Edit = () => {
                             type="text"
                             id="pinCode"
                             name="patientPincode"
-                            value={user.pinCode}
+                            value={user.patientPincode}
                             onChange={handleInputs}
                             className="form-control"
                             placeholder="Pin code"
