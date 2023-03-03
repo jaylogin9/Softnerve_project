@@ -9,7 +9,7 @@ const Display = (props) => {
 
   const loadData = async () => {
     try {
-      const response = await axios.get("/add-get");
+      const response = await axios.get("https://softnerve-project-backend.vercel.app//add-get");
         setData(response.data.Patient);
        // console.log(response);
     } catch (error) {
@@ -24,7 +24,7 @@ const Display = (props) => {
 
   const deleteContact = (id) => {
     if (window.confirm("Are you sure to delete this data")) {
-      axios.delete(`/delete/${id}`);
+      axios.delete(`https://softnerve-project-backend.vercel.app//delete/${id}`);
       window.alert("Data Deleted Successfully");
       setTimeout(() => loadData(), 500);
     }

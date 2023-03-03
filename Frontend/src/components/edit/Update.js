@@ -19,7 +19,7 @@ const Edit = () => {
  useEffect(() =>{
     const getData=async() =>{
         try {
-            const response=await axios.get(`/add-single/${id}`)
+            const response=await axios.get(`https://softnerve-project-backend.vercel.app//add-single/${id}`)
              setUser(response.data.Patient);
             // console.log(response.data);
         } catch (error) {
@@ -43,7 +43,7 @@ const Edit = () => {
             if(!patientName || !patientContact || !patientAddress || !patientPincode){
                 window.alert("Please provide value into each input field");
             } else{
-                const res = await axios.put(`/update/${id}`, {
+                const res = await axios.put(`https://softnerve-project-backend.vercel.app//update/${id}`, {
                     patientName,
                     patientContact,
                     patientAddress,

@@ -22,7 +22,7 @@ const Login = () => {
         try {
             e.preventDefault();
             const { email,  password } = user;
-            const res = await axios.post("/login", { email, password });
+            const res = await axios.post("https://softnerve-project-backend.vercel.app//login", { email, password });
             if (res)  {
                 window.alert("Login Successfully");
                 console.log("Login Successfully");
