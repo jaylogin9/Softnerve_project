@@ -11,7 +11,7 @@ const patientRoute = require('./routes/index.js');
 app.use(cookieParser());
 app.use(express.json());
 app.use(cors({
-    origin: "http://localhost:3000",
+    origin: "https://softnerve-project.vercel.app",
     methods: ["GET","POST","PUT","DELETE"]
 }));
 app.use(express.urlencoded({ extended: false }));
