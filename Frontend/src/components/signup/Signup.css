@@ -1,0 +1,16 @@
+.wrappersignup {
+    height: 100vh;
+    }
+    
+.signup{
+        width: 400px;
+        padding: 30px;
+        position: absolute;
+        top: 45px;
+        height: min-content;
+        border-radius: 5px;
+        color: black;
+        background-color: rgb(237, 237, 243);
+    }
+
+

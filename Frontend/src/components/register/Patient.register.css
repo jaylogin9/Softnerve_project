@@ -1,0 +1,11 @@
+
+    .register{
+        width: 450px;
+        padding: 30px;
+        position: absolute;
+        top: 110px;
+        height: min-content;
+        border-radius: 5px;
+        color: black;
+        background-color: rgb(237, 237, 243);
+    }
