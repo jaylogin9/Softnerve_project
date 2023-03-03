@@ -1,6 +1,6 @@
 import React from 'react';
 import {BrowserRouter, Routes,Route} from "react-router-dom";
-import Home from "./components/home";
+import Home from "./components/Home/home";
 import Header from "./components/Header";
 import Login from "./components/Login/Login";
 import Signup from "./components/signup/Signup";
@@ -8,7 +8,7 @@ import Register from "./components/register/Patient.register";
 import Display from "./components/display/Display"
 import Update from "./components/edit/Update";
 import Error from "./components/Error/ErrorPage";
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (

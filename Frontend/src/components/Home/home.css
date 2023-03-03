@@ -1,0 +1,26 @@
+
+.home-page{
+    position: relative;
+    height: 100vh;
+}
+
+.home-page .home-div{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
+}
+
+.home-page .home-div h1{
+    font-size: 40px;
+    font-weight: 800;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+
+.home-page .home-div p{
+    font-weight: 500;
+    font-size: 25px;
+}

@@ -1,5 +1,7 @@
 const SignUp = require("../model/signup.model.js");
 const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const session = require("express-session");
 
 const login = async (req, res) => {
   const { email, password } = req.body;
@@ -19,9 +21,14 @@ const login = async (req, res) => {
           console.log("Password doesn't match!");
           res.status(401).send(  "Invalid username and password" );
         } else {
-          console.log("Password matches!");
-          res.status(200).json("Login Successfull" );
-          console.log("Login Successfull");
+          res.status(200).json('Successful login');
+          //console.log("Password matches!");
+        // console.log("Login Successfull"); 
+        
+
+          //const token = jwt.sign({id: userExit.id },process.env.JWT, {expiresIn: '1800s'});
+          //Implement a login route that generates a JWT:
+            //res.cookie("access_token",token,{httpOnly: true,sameSite: 'none', secure: true }).status(200).json({ message: 'Successful login' });
         }
       });
     } else {
