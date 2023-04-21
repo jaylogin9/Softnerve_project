@@ -6,9 +6,10 @@ const session = require("express-session");
 const port = process.env.PORT || 8080;
 const db = require('./database/db.js');
 const patientRoute = require('./routes/index.js');
-
+const compression = require('compression');
 /* Middleware*/
 app.use(cookieParser());
+app.use(compression());
 app.use(express.json());
 app.use(cors({
     origin: "https://softnerve-project.vercel.app",
